@@ -1,0 +1,99 @@
+Q1. What are the steps for compiling source code into machine code?
+		A. Preprocessing, compiling, assembling, linking ----------------
+		B. Writing, compiling, debugging, testing
+		C. Processing, creating, asserting, clang
+		D. Make
+		
+Q2. What is the runtime of binary search?
+		A. O(1)
+		B. O(log n) -------------
+		C. O(n)
+		D. O(n^2)
+		
+Q3. Every time you malloc memory, you should also be sure to...
+		A. realloc
+		B. return
+		C. free --------------
+		D. exit
+		
+Q4. What is a race condition?
+		A. When conditions outside are nice for racing
+		B. When two things happen at the same time and produce an unexpected result -------------
+		C. When a line of code is executed too quickly
+		D. When a line of code is executed too slowly
+		
+Q5. Does zomming in on a photo let you "enhance" it to generate more detail?
+		A. Yes, just like in CSI
+		B. No, a photo only has a certain amount of detail -------------
+		
+Q6. Which of the following is not a characteristic of a good hash function?
+		A. Deterministic output
+		B. Randomness -------------
+		C. Uniform distribution
+		D. Efficiency
+		
+Q7. What does FIFO stand for?
+		A. A common dog's name
+		B. Your credit score 
+		C. First in, first out ------------
+		D. Function input, file output
+		
+Q8. Which of the following would represent pink in RGB values?
+		A. #0054e7
+		B. #9012a2
+		C. #e5d600
+		D. #ffd0e0 ----------------
+		
+Q9. In C, which of the following lines of code allocates enough memory for a copy of the string s?
+		A. malloc(s)
+		B. malloc(sizeof(s))
+		C. malloc(strlen(s))
+		D. malloc(strlen(s) + 1) -----------
+		
+Q10. How should you organize your clothes to be cool?
+		A. stack
+		B. queue --------------
+		C. dictionary
+		D. binary tree
+		
+Q11. What is a segmentation fault?
+		A. When a computer runs out of memory
+		B. When a program tries to read an empty file
+		C. When a program tries to access memory that it shoudn't -------------
+		D. When an earthquake happens
+		
+Q12. Which of the following types of overflow can result from recursion without a base case?
+		A. heap overflow
+		B. integer overflow
+		C. stack overflow -----------
+		D. buffer overflow
+		
+Q13. Which of these command-line programs checks your code for memory leaks?
+		A. valgrind -------------
+		B. clang
+		C. mkdir
+		D. make
+		
+Q14. Which of the following exists in C, but not Python?
+		A. Boolean expressions
+		B. do-while loops -----------------
+		C. recursive functions
+		D. floating-point numbers
+		
+Q15.  What HTTP request method should you use when sending private information, like a password?
+		A. GET
+		B. POST ------------------
+		C. SELECT
+		D. TEXT
+		
+Q16. What data structure allows for constant-time lookup for words in a dictionary?
+		A. linked list
+		B. binary search tree
+		C. array
+		D. trie ----------------
+		
+Q17. What is a cookie?
+		A. data used to identify your computer to websites
+		B. a delicious snack
+		C. both of the above ------------------
+		D. none of the above
