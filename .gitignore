@@ -2,3 +2,9 @@ Makefile
 tags
 *.workspace
 .codelite
+
+*/Debug/
+*/compile_flags.txt
+*/*.mk
+*/*.project
+*/Trivia.txt
