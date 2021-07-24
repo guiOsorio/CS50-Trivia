@@ -44,9 +44,33 @@ public:
 		return streak;
 	}
 	
-	// INCREMENT XP (by 1 and when streak is 5, set streak back to 0)
+	// INCREMENT XP
+	void increment_xp() {
+		xp += 1;
+	}
+	
 	// DECREMENT XP (by 1 and when the player got an answer wrong)
+	void decrement_xp() {
+		xp -= 1;
+	}
+	
 	// INCREMENT SCORE (by a max of 30, depends on how long the player took to answer the question)
+	void increment_score() {
+		score +=5; // TODO
+	}
+	
+	// INCREMENT STREAK (by 1 after every right answer)
+	void increment_streak() {
+		streak += 1;
+	}
+	
+	// RESET STREAK (if streak is 5, set streak back to 0 and increment xp by 1)
+	void reset_streak() {
+		streak = 0;
+	}
+	
+	// Displays the Player
+	void display() const;
 };
 
 #endif
