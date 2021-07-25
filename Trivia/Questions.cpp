@@ -1,5 +1,4 @@
 #include <iostream>
-#include "Player.h"
 
 char display_question(int question_number) {
 	char correct_answer;
@@ -156,5 +155,6 @@ char display_question(int question_number) {
 			correct_answer = 'C';
 			break;
 	}
+	std::cout << "\n";
 	return correct_answer;
 }

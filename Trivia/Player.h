@@ -55,8 +55,8 @@ public:
 	}
 	
 	// INCREMENT SCORE (by a max of 30, depends on how long the player took to answer the question)
-	void increment_score() {
-		score +=5; // TODO
+	void increment_score(int question_score) {
+		score += question_score;
 	}
 	
 	// INCREMENT STREAK (by 1 after every right answer)
