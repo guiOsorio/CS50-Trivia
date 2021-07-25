@@ -1,4 +1,8 @@
 #include "Game.h"
+#include <iostream>
+#include <stdlib.h> //for system()
+#include "windows.h"
+#include <ctime>
 
 // From Questions.cpp
 char display_question(int question_number);
@@ -7,7 +11,7 @@ void play_game(Player player) {
 	int question_number {1};
 	char correct_answer;
 	while(question_number < 18) {
-		int question_score {30};
+		int question_score {20};
 		correct_answer = display_question(question_number);
 		
 		time_t currentTime;
@@ -70,7 +74,7 @@ void play_game(Player player) {
 	} else {
 		std::cout << "GAME OVER" << std::endl;
 	}
-	std::cout << "Your score was: " << player.get_score() << std::endl;
+	std::cout << "\nYour score was: " << player.get_score() << std::endl;
 }
 
 bool ask_to_play() {

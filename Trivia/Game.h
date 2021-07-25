@@ -1,11 +1,7 @@
 #ifndef _GAME_H_
 #define _GAME_H_
 
-#include <iostream>
 #include "Player.h"
-#include <stdlib.h> //for system()
-#include "windows.h"
-#include <ctime>
 
 // From Player.h
 void increment_streak(Player &player) {
