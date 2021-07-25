@@ -1,5 +1,5 @@
-#ifndef _MOVIE_H_
-#define _MOVIE_H_
+#ifndef _PLAYER_H_
+#define _PLAYER_H_
 
 #include <string>
 

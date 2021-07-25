@@ -18,9 +18,32 @@
 // Checks for actions to do after the user answers a question
 int after_answer(Player player, char answer, char correct_answer);
 
-bool play_game(Player player);
+void play_game(Player player);
 
 bool ask_to_play();
+
+void increment_streak(Player &player) {
+	player.increment_streak();
+}
+
+void increment_score(Player &player) {
+	player.increment_score();
+}
+
+void reset_streak(Player &player) {
+	player.reset_streak();
+}
+
+void increment_xp(Player &player) {
+	player.increment_xp();
+}
+
+void decrement_xp(Player &player) {
+	player.decrement_xp();
+}
+
+char display_question(int question_number);
+
 
 int main() {
 	bool play_again {true};
@@ -34,46 +57,43 @@ int main() {
 }
 
 
-
-int after_answer(Player player, char answer, char correct_answer) {
-	if(answer == correct_answer) {
-		player.increment_streak();
-		player.increment_score();
+void play_game(Player player) {
+	int question_number {1};
+	char correct_answer;
+	bool game_lost {false};
+	while(question_number < 18) {
+		correct_answer = display_question(question_number);
+		char answer;
+		std::cout << "Answer: ";
+		std::cin >> answer;
+		answer = toupper(answer);
+		std::cout << "\n";
+		if(answer == correct_answer) {
+			std::cout << "You are CORRECT, here are your stats: " << std::endl;
+			increment_streak(player);
+			increment_score(player);
+		} else {
+			std::cout << "WRONG answer, here are your stats: " << std::endl;
+			reset_streak(player);
+			decrement_xp(player);
+		}
+		if(player.get_streak() == 5) {
+			increment_xp(player);
+			reset_streak(player);
+		}
+		if(player.get_xp() == 0) {
+			player.display();
+			break;
+		}
+		player.display();
+		std::cout << "\n";
+		question_number++;
+	}
+	if(question_number > 17) {
+		std::cout << "CONGRATS, YOU WON" << std::endl;
 	} else {
-		player.reset_streak();
-		player.decrement_xp();
+		std::cout << "GAME OVER, TRY AGAIN" << std::endl;
 	}
-	
-	if(player.get_streak() == 5) {
-		player.increment_xp();
-		player.reset_streak();
-	}
-	
-	if(player.get_xp() == 2) {
-		std::cout << "GAME OVER" << std::endl;
-		return 0;
-	} else {
-		std::cout << "CONGRATS" << std::endl;
-		return 1;
-	}
-}
-
-bool play_game(Player player) {
-	std::cout << "QUESTION 1" << std::endl;
-	std:: cout << "What are the steps for compiling source code into machine code?" << std::endl;
-	std::cout << "A. Preprocessing, compiling, assembling, linking" << std::endl;
-	std::cout << "B. Writing, compiling, debugging, testing" << std::endl;
-	std::cout << "C. Processing, creating, asserting, clang" << std::endl;
-	std::cout << "D. Make" << std::endl;
-	char answer1;
-	char correct_answer1 = 'A';
-	std::cout << "Answer: ";
-	std::cin >> answer1;
-	if(after_answer(player, answer1, correct_answer1) == 0) {
-		return false;
-	}
-	player.display();
-	return true;
 }
 
 bool ask_to_play() {
